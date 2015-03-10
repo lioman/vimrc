@@ -1,5 +1,5 @@
 set spelllang=de_de
-set thesaurus+=openthesaurus.txt
+set thesaurus+=~/.vim_runtime/openthesaurus.txt
 set number
 if has('autocmd')
     if has('spell')
