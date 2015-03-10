@@ -26,6 +26,7 @@ additional contributions from:
 * [jherdman](https://github.com/jherdman)
 * [kozo2](https://github.com/kozo2)
 * [lilydjwg](https://github.com/lilydjwg)
+* [lpil](https://github.com/lpil)
 * [marutanm](https://github.com/marutanm)
 * [MicahElliott](https://github.com/MicahElliott)
 * [muffinresearch](https://github.com/muffinresearch)
@@ -41,4 +42,5 @@ additional contributions from:
 * [steveno](https://github.com/steveno)
 * [taq](https://github.com/taq)
 * [thisgeek](https://github.com/thisgeek)
+* [trusktr](https://github.com/trusktr)
 * [Xandaros](https://github.com/Xandaros)
