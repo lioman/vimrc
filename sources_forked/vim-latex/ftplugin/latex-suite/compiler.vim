@@ -583,13 +583,27 @@ function! Tex_CompileMultipleTimes()
 
 			let needToRerun = 1
 		endif
+        
+        " Run makeglossaries if something is written to glossary file
+        " TODO: adding a an option to run it only when configured
+        if runCount == 1 && Tex_IsPresentInFile('Package glossaries Info: Writing glossary file', mainFileName_root.'.log')
+            echomsg "We should run makeglossaries"
+            let temp_mp = &mp | let &mp = Tex_GetVarValue('Tex_GlossaryFlavor')
+			exec  'make '.mainFileName_root
+			let &mp = temp_mp
+
+            let needToRerun = 1
+        endif
 
 		" The first time we see if we need to run bibtex and if the .bbl file
 		" changes, we will rerun latex.
-		if runCount == 0 && Tex_IsPresentInFile('\\bibdata', mainFileName_root.'.aux')
-			let bibFileName = mainFileName_root.'.bbl'
-
-			let biblinesBefore = Tex_CatFile(bibFileName)
+        " old code
+		"if runCount == 0 && Tex_IsPresentInFile('\\bibdata', mainFileName_root.'.aux')
+		"	let bibFileName = mainFileName_root.'.bbl'
+        if runCount == 0 && Tex_IsPresentInFile('Please \(re\)run Biber on the file', mainFileName_root.'.log')
+            let bibFileName = mainFileName_root.'.bcf' 
+			
+            let biblinesBefore = Tex_CatFile(bibFileName)
 
 			echomsg "Running '".Tex_GetVarValue('Tex_BibtexFlavor')."' ..."
 			let temp_mp = &mp | let &mp = Tex_GetVarValue('Tex_BibtexFlavor')
