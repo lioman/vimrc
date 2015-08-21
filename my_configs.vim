@@ -30,4 +30,4 @@ if has('gui_running')
           let g:tex_flavor='latex'
       endif
 
-
+autocmd FileType javascript setlocal equalprg=js-beautify\ -j\ --stdin
