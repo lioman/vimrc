@@ -20,6 +20,8 @@ if has('autocmd')
         au BufNewFile,BufRead,BufEnter  *.txt   setlocal spell  spelllang=de_de
         au BufNewFile,BufRead,BufEnter  README  setlocal spell  spelllang=en
     endif
+    au FileType tex setlocal textwidth=100
+    au FileType python setlocal textwidth=79
 endif
 
 "LaTeX-Plugin
