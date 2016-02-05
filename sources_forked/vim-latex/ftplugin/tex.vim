@@ -1,5 +1,5 @@
 let g:Tex_BibtexFlavor = 'biber'
-let g:Tex_GlossaryFlavor = 'makeglossaries -q -g -L german'
+let g:Tex_GlossaryFlavor = 'makeglossaries -q -g'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats='pdf'
 let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode $*'
