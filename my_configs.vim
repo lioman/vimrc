@@ -1,8 +1,9 @@
 "general settings
-set spelllang=de_de
+set spelllang=en_gb
 set thesaurus+=~/.vim_runtime/thesauri/openthesaurus.txt
 set number
 colorscheme peaksea
+let maplocalleader="-"
 
 "Settings for GUI
 if has('gui_running')
