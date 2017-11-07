@@ -1,0 +1,9 @@
+[submodule "sources_non_forked/editorconfig-vim"]
+	path = sources_non_forked/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
+[submodule "sources_non_forked/riv.vim"]
+	path = sources_non_forked/riv.vim
+	url = git@github.com:Rykka/riv.vim.git
+[submodule "sources_non_forked/vim-wakatime"]
+	path = sources_non_forked/vim-wakatime
+	url = git://github.com/wakatime/vim-wakatime.git
